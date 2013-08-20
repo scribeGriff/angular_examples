@@ -4,8 +4,8 @@
   <head>
     <meta charset="utf-8">
     <title>Angular examples - TODO App</title>
-    <link rel="stylesheet" href="bootstrap.css">
-    <link rel="stylesheet" href="angular_todo_app.css">
+    <link rel="stylesheet" href="../bootstrap.css">
+    <link rel="stylesheet" href="../angular_standard.css">
     <script src="packages/browser/dart.js"></script>
     <script src="packages/browser/interop.js"></script>
     <script src="angular_todo_app.dart" type="application/dart"></script>
@@ -20,6 +20,7 @@
       </div>
       <p>Remaining <b>{{todo.remaining()}}</b> of <b>{{todo.items.length}}</b> items.</p>
       <ul class="well unstyled">
+        <!-- the todo.classFor(item) doesn't appear to be working -->
         <li ng-repeat="item in todo.items" ng-class="todo.classFor(item)">
           <label class="checkbox">
             <input type="checkbox" ng-model="item.done"> {{item.text}}

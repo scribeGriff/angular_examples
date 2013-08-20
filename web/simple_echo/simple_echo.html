@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <title>simple_echo</title>
+    <link rel="stylesheet" href="../bootstrap.css">
+    <link rel="stylesheet" href="../angular_standard.css">
+    <script type="application/dart" src="simple_echo.dart"></script>
+    <script src="packages/browser/dart.js"></script>
+  </head>
+  <body ng-app>
+    <div class="border well" ng-cloak>
+      <span>Insert your name:</span>
+      <input type="text" ng-model="user.name" />
+      <h4>You are typing: {{user.name}}</h4>
+    </div>
+  </body>
+</html>

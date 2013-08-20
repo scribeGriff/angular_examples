@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <title>simple_controller</title>
+    <link rel="stylesheet" href="../bootstrap.css">
+    <link rel="stylesheet" href="../angular_standard.css">
+    <script type="application/dart" src="simple_controller.dart"></script>
+    <script src="packages/browser/dart.js"></script>
+  </head>
+
+  <body ng-app>
+    <div ng-controller="controller.Simple as controller" class="border well" ng-cloak>
+      <h3>Hello, {{controller.message}}!</h3>
+    </div>
+
+  </body>
+</html>
