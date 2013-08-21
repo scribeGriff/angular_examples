@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <title>simple_controller</title>
+    <link rel="stylesheet" href="../bootstrap.css">
+    <link rel="stylesheet" href="../angular_standard.css">
+    <script src="packages/browser/dart.js"></script>
+    <script src="bind_functions.dart" type="application/dart"></script>
+  </head>
+
+  <body ng-app>
+    <div ng-controller="greetings.Person as person" class="border well" ng-cloak>
+      <p>What's your name?:</p>
+      <input type="text" ng-model="person.user.name" />
+      <button ng-click="person.greet()" class="btn btn-primary">Click here!</button>
+      <h3>{{person.message}}</h3>
+    </div>
+  </body>
+</html>
