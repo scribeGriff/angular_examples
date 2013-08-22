@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <title>simple_directives</title>
+    <link rel="stylesheet" href="../bootstrap.css">
+    <link rel="stylesheet" href="../angular_standard.css">
+    <script src="packages/browser/dart.js"></script>
+    <script src="simple_directives.dart" type="application/dart"></script>
+  </head>
+
+  <body ng-app>
+    <div class="border well">
+      <button ng-click="hide = !hide" class="btn btn-primary">Hide</button>
+        <div ng-hide="hide">
+          <p>I am only visible when hide is false.</p>
+        </div>
+    </div>
+  </body>
+</html>

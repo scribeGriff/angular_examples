@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <title>repeat_directives</title>
+    <link rel="stylesheet" href="../bootstrap.css">
+    <link rel="stylesheet" href="../angular_standard.css">
+    <script type="application/dart" src="repeat_directives.dart"></script>
+    <script src="packages/browser/dart.js"></script>
+  </head>
+
+  <body ng-app>
+    <div ng-controller="repeat.Developers as list">
+      <ul>
+        <li ng-repeat="person in list.developers">
+          {{person.name}} from {{person.country}}
+        </li>
+      </ul>
+    </div>
+  </body>
+</html>

@@ -32,5 +32,7 @@ where controller is the Dart library name and Simple is the first part of the cl
 - [Todo](https://github.com/scribeGriff/angular_examples/tree/master/web/todo "Todo"): From angular.dart [demo](https://github.com/angular/angular.dart/tree/master/demo "angular dart demo")
 - [Simple Echo](https://github.com/scribeGriff/angular_examples/tree/master/web/simple_echo "Simple Echo")
 - [Simple Controller](https://github.com/scribeGriff/angular_examples/tree/master/web/simple_controller "Simple Controller")
-- Binding a function to a scope - except I don't know how to use scopes with Dart so I'm using classes, final fields and methods. 
+- [Binding a function to a scope](https://github.com/scribeGriff/angular_examples/tree/master/web/bind_functions "bind function scope") 
+- Simple Directive
+- Repeating Directive
 
