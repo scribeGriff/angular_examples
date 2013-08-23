@@ -10,8 +10,8 @@
   </head>
 
   <body ng-app>
-    <div ng-controller="repeat.Developers as list">
-      <ul>
+    <div ng-controller="repeat.Developers as list" class="border well" ng-cloak>
+      <ul class="well unstyled">
         <li ng-repeat="person in list.developers">
           {{person.name}} from {{person.country}}
         </li>

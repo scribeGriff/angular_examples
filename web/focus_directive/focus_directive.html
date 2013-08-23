@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <title>focus_directive</title>
+    <link rel="stylesheet" href="../bootstrap.css">
+    <link rel="stylesheet" href="../angular_standard.css">
+    <script type="application/dart" src="focus_directive.dart"></script>
+    <script src="packages/browser/dart.js"></script>
+  </head>
+
+  <body ng-app>
+    <div ng-controller="focus.Person as person" class="border well" ng-cloak>
+      <p>What's your name?:</p>
+      <input type="text" focus ng-model="person.user.name"/>
+      <button ng-click="person.greet()" class="btn btn-primary">Click here!</button>
+      <h3>{{person.message}}</h3>
+    </div>
+  </body>
+</html>

@@ -25,7 +25,8 @@ where controller is the Dart library name and Simple is the first part of the cl
       bootstrapAngular([new AngularModule()]);
     } 
 
-- Not sure how to use $scope with Dart
+- Not sure how to use `$scope` with Dart
+- Not sure how to force a render with custom directives - `scope.$apply` throws in simple test case.
 
 ### Examples: ###
 
@@ -35,4 +36,5 @@ where controller is the Dart library name and Simple is the first part of the cl
 - [Binding a function to a scope](https://github.com/scribeGriff/angular_examples/tree/master/web/bind_functions "bind function scope") 
 - [Simple Directive](https://github.com/scribeGriff/angular_examples/tree/master/web/simple_directives "Simple Directives")
 - [Repeating Directive](https://github.com/scribeGriff/angular_examples/tree/master/web/repeat_directives "Repeating Directives")
+- Custom Directives - focus(): updates dom but doesn't render
 
