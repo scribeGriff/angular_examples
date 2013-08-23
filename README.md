@@ -26,7 +26,30 @@ where controller is the Dart library name and Simple is the first part of the cl
     } 
 
 - Not sure how to use `$scope` with Dart
-- Not sure how to force a render with custom directives - `scope.$apply` throws in simple test case.
+- Not sure how to force a render with custom directives - `scope.$apply` throws in simple test case.  **Update:** Try `scope.$evalAsync()` as in the example below.
+
+Example of creating a custom directive:
+
+    @NgDirective(
+      selector: '[focus]'
+    )
+    class FocusDirective {
+      Element element;
+      Scope scope;
+    
+      FocusDirective(Element this.element, Scope this.scope) {
+        scope.$evalAsync(() => element.focus());
+      }
+    }
+    
+    main() {
+      var module = new AngularModule()
+        ..directive(FocusDirective);
+    
+      bootstrapAngular([module]);
+    }
+
+
 
 ### Examples: ###
 
@@ -36,5 +59,5 @@ where controller is the Dart library name and Simple is the first part of the cl
 - [Binding a function to a scope](https://github.com/scribeGriff/angular_examples/tree/master/web/bind_functions "bind function scope") 
 - [Simple Directive](https://github.com/scribeGriff/angular_examples/tree/master/web/simple_directives "Simple Directives")
 - [Repeating Directive](https://github.com/scribeGriff/angular_examples/tree/master/web/repeat_directives "Repeating Directives")
-- Custom Directives - focus(): updates dom but doesn't render
+- [Custom Directives - focus()](https://github.com/scribeGriff/angular_examples/tree/master/web/focus_directive): see example above
 
