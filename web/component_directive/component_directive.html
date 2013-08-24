@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <title>element_component</title>
+    <link rel="stylesheet" href="../bootstrap.css">
+    <link rel="stylesheet" href="../angular_standard.css">
+    <script type="application/dart" src="component_directive.dart"></script>
+    <script src="packages/browser/dart.js"></script>
+  </head>
+
+  <body ng-app>
+    <div ng-controller="hello.Hello" class="border well" ng-cloak>
+      <!-- components aren't working yet???  -->
+      <hello></hello>
+      <!-- filters not implemented yet!  ahhhhhh!  23 August 2013  -->
+      <span>There are 13 phones in the basket. Total: {{ 1232.12 | currency }}</span>
+    </div>
+  </body>
+</html>

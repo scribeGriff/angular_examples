@@ -4,6 +4,11 @@ See also: [angular-tips.com](http://angular-tips.com/ "angular tips")
 
 Looking at examples of using Dart with Angular.
 
+Show Stoppers (23 Aug 2013)
+
+- Unable to get @NgComponent to inject a template
+- Filters have not yet been implemented
+
 ### Issues, Notes and Questions: ###
 
 - I don't see the 'done' class being applied in TODO example.

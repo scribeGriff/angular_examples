@@ -30,9 +30,6 @@ class FocusDirective {
 
   FocusDirective(Element this.element, Scope this.scope) {
     scope.$evalAsync(() => element.focus());
-    // The above now works but the following does not.  Needs val
-    // attribute not text.
-    scope.$evalAsync(() => element.text = 'found this element: $element');
   }
 }
 
