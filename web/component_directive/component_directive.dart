@@ -1,28 +1,14 @@
-library hello;
-
 import 'package:angular/angular.dart';
 
-class HelloController {
-  HelloController();
-  attach(Scope scope) {
-    print("ah, i'm being attached!");
-  }
-}
+// There is a bug that prevents the html from rendering if selector
+// is used.  Without a selector, component name is derived from
+// the class name.
 
 @NgComponent(
-    templateUrl: 'hello.html',
-    selector: 'hello'
+    //selector: "hello",
+    template: "<div>Hello readers, thank you for coming!</div>"
 )
 class HelloComponent {
-//  Scope scope;
-//  HelloController controller;
-//  static String $templateUrl = 'hello.html';
-//
-//
-//  Hello(HelloController this.controller, Scope this.scope) {
-//    controller.attach(scope);
-//    //template = '<div>Hello readers, thank you for coming</div>';
-//  }
 }
 
 main() {

@@ -4,12 +4,27 @@ See also: [angular-tips.com](http://angular-tips.com/ "angular tips")
 
 Looking at examples of using Dart with Angular.
 
-Show Stoppers (23 Aug 2013)
-
-- Unable to get @NgComponent to inject a template
-- Filters have not yet been implemented
-
 ### Issues, Notes and Questions: ###
+
+- Filters have not yet been implemented
+- Using the `selector` field in a `@NgComponent` definition prevents a template from rendering.  The following does work for now:
+
+````dart
+@NgComponent(
+    // using selector causes template not to render
+    //selector: "hello",
+    template: "<div>Hello readers, thank you for coming!</div>"
+)
+class HelloComponent {
+}
+
+main() {
+  var module = new AngularModule()
+    ..directive(HelloComponent);
+
+  bootstrapAngular([module]);
+}
+````
 
 - I don't see the 'done' class being applied in TODO example.
 - Calling a constructor function for the controller uses the following syntax:
@@ -65,4 +80,5 @@ Example of creating a custom directive:
 - [Simple Directive](https://github.com/scribeGriff/angular_examples/tree/master/web/simple_directives "Simple Directives")
 - [Repeating Directive](https://github.com/scribeGriff/angular_examples/tree/master/web/repeat_directives "Repeating Directives")
 - [Custom Directives - focus()](https://github.com/scribeGriff/angular_examples/tree/master/web/focus_directive): see example above
+- Component Directive: Rendering HTML in a custom component
 
