@@ -33,42 +33,45 @@ main() {
 
 where controller is the Dart library name and Simple is the first part of the class name (or constructor function name if one exists).  For example:
 
-    library controller;
+````dart
+library controller;
     
-    import 'package:angular/angular.dart';
+import 'package:angular/angular.dart';
     
-    class SimpleController {
-      final String message = 'World';
-    }
+class SimpleController {
+  final String message = 'World';
+}
     
-    main() {
-      bootstrapAngular([new AngularModule()]);
-    } 
+main() {
+  bootstrapAngular([new AngularModule()]);
+} 
+````
 
 - Not sure how to use `$scope` with Dart
 - Not sure how to force a render with custom directives - `scope.$apply` throws in simple test case.  **Update:** Try `scope.$evalAsync()` as in the example below.
 
 Example of creating a custom directive:
 
-    @NgDirective(
-      selector: '[focus]'
-    )
-    class FocusDirective {
-      Element element;
-      Scope scope;
+````dart
+@NgDirective(
+  selector: '[focus]'
+)
+class FocusDirective {
+  Element element;
+  Scope scope;
     
-      FocusDirective(Element this.element, Scope this.scope) {
-        scope.$evalAsync(() => element.focus());
-      }
-    }
+  FocusDirective(Element this.element, Scope this.scope) {
+    scope.$evalAsync(() => element.focus());
+  }
+}
     
-    main() {
-      var module = new AngularModule()
-        ..directive(FocusDirective);
+main() {
+  var module = new AngularModule()
+    ..directive(FocusDirective);
     
-      bootstrapAngular([module]);
-    }
-
+  bootstrapAngular([module]);
+}
+````
 
 
 ### Examples: ###
@@ -80,5 +83,5 @@ Example of creating a custom directive:
 - [Simple Directive](https://github.com/scribeGriff/angular_examples/tree/master/web/simple_directives "Simple Directives")
 - [Repeating Directive](https://github.com/scribeGriff/angular_examples/tree/master/web/repeat_directives "Repeating Directives")
 - [Custom Directives - focus()](https://github.com/scribeGriff/angular_examples/tree/master/web/focus_directive): see example above
-- Component Directive: Rendering HTML in a custom component
+- [Component Directive](https://github.com/scribeGriff/angular_examples/tree/master/web/component_directive "Component Directive"): Rendering HTML in a custom component
 
