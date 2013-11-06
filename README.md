@@ -11,11 +11,11 @@ Most examples updated to beta (v. 0.9.0) release 11/5/2013 9:38:06 PM
 - [Todo](https://github.com/scribeGriff/angular_examples/tree/master/web/todo "Todo"): From angular.dart [demo](https://github.com/angular/angular.dart/tree/master/demo "angular dart demo") - not yet updated to version 0.9.0.
 - [Simple Echo](https://github.com/scribeGriff/angular_examples/tree/master/web/simple_echo "Simple Echo")
 - [Simple Controller](https://github.com/scribeGriff/angular_examples/tree/master/web/simple_controller "Simple Controller") - not yet updated to version 0.9.0
-- Simple Filter
+- [Simple Filter](https://github.com/scribeGriff/angular_examples/tree/master/web/simple_filter "Simple Filter")
 - [Binding a function to a scope](https://github.com/scribeGriff/angular_examples/tree/master/web/bind_functions "bind function scope") 
 - [Simple Directive](https://github.com/scribeGriff/angular_examples/tree/master/web/simple_directives "Simple Directives") - not yet updated to version 0.9.0
 - [Repeating Directive](https://github.com/scribeGriff/angular_examples/tree/master/web/repeat_directives "Repeating Directives")
-- Repeating Directive with Filter
+- [Repeating Directive with Filter](https://github.com/scribeGriff/angular_examples/tree/master/web/repeat_directives_filter "Repeating Directive with Filter")
 - [Custom Directives - focus()](https://github.com/scribeGriff/angular_examples/tree/master/web/focus_directive)
 - [Component Directive](https://github.com/scribeGriff/angular_examples/tree/master/web/component_directive "Component Directive"): Rendering HTML in a custom component
 
