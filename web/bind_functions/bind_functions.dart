@@ -8,11 +8,14 @@ class Person {
   Person([this.name = '']);
 }
 
-class PersonController {
+@NgController(
+    selector: '[person-greeter]',
+    publishAs: 'person')
+class PersonGreeterController {
   Person user;
   String message;
 
-  PersonController() {
+  PersonGreeterController() {
     user = new Person();
   }
   greet() {
@@ -20,6 +23,12 @@ class PersonController {
   }
 }
 
+class MyAppModule extends Module {
+  MyAppModule() {
+    type(PersonGreeterController);
+  }
+}
+
 main() {
-  bootstrapAngular([new AngularModule()]);
+  ngBootstrap(module: new MyAppModule());
 }

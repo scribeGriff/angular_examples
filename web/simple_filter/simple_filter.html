@@ -4,12 +4,10 @@
   <head>
     <title>simple echo - angular</title>
     <link rel="stylesheet" href="../angular_standard.css">
-    <script type="application/dart" src="simple_echo.dart"></script>
+    <script type="application/dart" src="simple_filter.dart"></script>
     <script src="packages/browser/dart.js"></script>
   </head>
   <body ng-app ng-cloak>
-    <span>Insert your name:</span>
-    <input type="text" ng-model="user.name" />
-    <h4>You are typing: {{user.name}}</h4>
+    <span>There are 13 phones in the basket. Total: {{ 1232.12 | currency }}</span>
   </body>
 </html>

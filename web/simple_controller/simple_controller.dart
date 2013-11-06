@@ -7,5 +7,5 @@ class SimpleController {
 }
 
 main() {
-  bootstrapAngular([new AngularModule()]);
+  ngBootstrap();
 }

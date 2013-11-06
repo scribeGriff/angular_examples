@@ -2,6 +2,5 @@ name: angular_examples
 author: Richard Griffith
 description: Experiments with using Angular in Dart.
 dependencies:
-  angular:
-    git: git://github.com/angular/angular.dart.git
+  angular: any
   browser: any

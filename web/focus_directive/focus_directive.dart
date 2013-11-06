@@ -9,11 +9,14 @@ class Person {
   Person([this.name = '']);
 }
 
-class PersonController {
+@NgController(
+    selector: '[person-greeter]',
+    publishAs: 'person')
+class PersonGreeterController {
   Person user;
   String message;
 
-  PersonController() {
+  PersonGreeterController() {
     user = new Person();
   }
   greet() {
@@ -26,16 +29,19 @@ class PersonController {
 )
 class FocusDirective {
   Element element;
-  Scope scope;
 
-  FocusDirective(Element this.element, Scope this.scope) {
-    scope.$evalAsync(() => element.focus());
+  FocusDirective(Element this.element) {
+    element.focus();
+  }
+}
+
+class MyAppModule extends Module {
+  MyAppModule() {
+    type(PersonGreeterController);
+    type(FocusDirective);
   }
 }
 
 main() {
-  var module = new AngularModule()
-    ..directive(FocusDirective);
-
-  bootstrapAngular([module]);
+  ngBootstrap(module: new MyAppModule());
 }

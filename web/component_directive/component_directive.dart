@@ -1,19 +1,22 @@
 import 'package:angular/angular.dart';
 
-// There is a bug that prevents the html from rendering if selector
-// is used.  Without a selector, component name is derived from
-// the class name.
+// The following is an example of direct injection of the template
+// rather than the example which injects from a file.
+// template: "<div>Hello from template, thank you for coming!</div>"
 
 @NgComponent(
-    //selector: "hello",
-    template: "<div>Hello readers, thank you for coming!</div>"
+    selector: "hello",
+    templateUrl: "hello.html"
 )
 class HelloComponent {
 }
 
-main() {
-  var module = new AngularModule()
-    ..directive(HelloComponent);
+class MyAppModule extends Module {
+  MyAppModule() {
+    type(HelloComponent);
+  }
+}
 
-  bootstrapAngular([module]);
+main() {
+  ngBootstrap(module: new MyAppModule());
 }

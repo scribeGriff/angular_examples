@@ -5,14 +5,14 @@
     <title>repeat_directives</title>
     <link rel="stylesheet" href="../bootstrap.min.css">
     <link rel="stylesheet" href="../angular_standard.css">
-    <script type="application/dart" src="repeat_directives.dart"></script>
+    <script type="application/dart" src="repeat_directives_filter.dart"></script>
     <script src="packages/browser/dart.js"></script>
   </head>
 
   <body ng-app>
     <div developers-controller class="border well" ng-cloak>
       <ul class="well unstyled">
-        <li ng-repeat="developer in cntl.developers">
+        <li ng-repeat="developer in cntl.developers | orderBy:'name'">
           {{developer.name}} from {{developer.country}}
         </li>
       </ul>
