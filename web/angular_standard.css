@@ -1,4 +1,6 @@
-.ng-hide {
+[ng-cloak], 
+.ng-hide, 
+.ng-show {
   display: none !important;
 }
 li.done {
@@ -28,9 +30,6 @@ ul.well {
 p {
   margin: 0 0 6px;
   padding-top: 4px;
-}
-[ng-cloak] {
-  display: none;
 }
 .loading {
   text-align: center;
