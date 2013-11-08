@@ -18,12 +18,6 @@ class DevelopersSearch {
   }
 }
 
-class MyAppModule extends Module {
-  MyAppModule() {
-    type(DevelopersSearch);
-  }
-}
-
 main() {
   ngBootstrap(module: new AngularModule()..type(DevelopersSearch));
 }
