@@ -19,12 +19,12 @@ Most examples updated to beta (v. 0.9.0) release 11/7/2013 6:43:28 PM
 - [Repeating Directive with Filter](https://github.com/scribeGriff/angular_examples/tree/master/web/repeat_directives_filter "Repeating Directive with Filter")
 - [Custom Directives - focus()](https://github.com/scribeGriff/angular_examples/tree/master/web/focus_directive)
 - [Component Directive](https://github.com/scribeGriff/angular_examples/tree/master/web/component_directive "Component Directive"): Rendering HTML in a custom component
-- Filters for search
+- [Filters for search](https://github.com/scribeGriff/angular_examples/tree/master/web/filter_search "Filters for search")
 - Todo: see the angular.dart [demo](https://github.com/angular/angular.dart/tree/master/demo/todo "angular dart demo")
 
 ### Issues, Notes and Questions: ###
 
-- Search text implemented `filter:search` is working yet.
+- Search text implementing `ng-model="searchText"` or `ng-model="search.fieldName"` works.  See this [example](https://github.com/scribeGriff/angular_examples/tree/master/web/filter_search "Filter Search").
 - To use the ng-show or ng-hide directives, include the following in your project's css file:
 
 ````css

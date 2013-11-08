@@ -25,6 +25,5 @@ class MyAppModule extends Module {
 }
 
 main() {
-  //ngBootstrap(module: new MyAppModule());
   ngBootstrap(module: new AngularModule()..type(DevelopersSearch));
 }
