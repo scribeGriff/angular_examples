@@ -20,6 +20,7 @@ Most examples updated to beta (v. 0.9.0) release 11/7/2013 6:43:28 PM
 - [Custom Directives - focus()](https://github.com/scribeGriff/angular_examples/tree/master/web/focus_directive)
 - [Component Directive](https://github.com/scribeGriff/angular_examples/tree/master/web/component_directive "Component Directive"): Rendering HTML in a custom component
 - [Filters for search](https://github.com/scribeGriff/angular_examples/tree/master/web/filter_search "Filters for search")
+- Custom filter - capitalize
 - Todo: see the angular.dart [demo](https://github.com/angular/angular.dart/tree/master/demo/todo "angular dart demo")
 
 ### Issues, Notes and Questions: ###
@@ -79,7 +80,7 @@ main() {
 
 - A simple show/hide directive can be implemented as follows:
 
-````dart
+````html
 <body ng-app>
   <div class="border well">
     <button ng-click="show = !show" class="btn btn-primary">Show</button>
