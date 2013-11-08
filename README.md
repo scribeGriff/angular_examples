@@ -1,14 +1,15 @@
 ## Working with Angular in Dart ##
-[Reference: Angular Dart](https://github.com/angular/angular.dart)  
+![](http://1.bp.blogspot.com/-3y7twYcEV-I/Unk5VPpTMdI/AAAAAAAACiM/SRuk0bHMS20/s1600/Screen+Shot+2013-11-05+at+10.29.34+AM.png)  
+[Reference: Angular Dart on Github](https://github.com/angular/angular.dart)  
+[Angular Dart Tutorial](https://github.com/angular/angular.dart.tutorial "AngularDart Tutorial")  
 See also: [angular-tips.com](http://angular-tips.com/ "angular tips")
 
 Looking at examples of using Dart with Angular.  
 
-Most examples updated to beta (v. 0.9.0) release 11/5/2013 9:38:06 PM 
+Most examples updated to beta (v. 0.9.0) release 11/7/2013 6:43:28 PM   
 
 ### Dart Equivalent Examples from [Why Does Angular.js Rock](http://angular-tips.com/blog/2013/08/why-does-angular-dot-js-rock/ "Why Does Angular.js Rock?"): ###
 
-- [Todo](https://github.com/scribeGriff/angular_examples/tree/master/web/todo "Todo"): From angular.dart [demo](https://github.com/angular/angular.dart/tree/master/demo "angular dart demo") - not yet updated to version 0.9.0.
 - [Simple Echo](https://github.com/scribeGriff/angular_examples/tree/master/web/simple_echo "Simple Echo")
 - [Simple Controller](https://github.com/scribeGriff/angular_examples/tree/master/web/simple_controller "Simple Controller")
 - [Simple Filter](https://github.com/scribeGriff/angular_examples/tree/master/web/simple_filter "Simple Filter")
@@ -18,10 +19,12 @@ Most examples updated to beta (v. 0.9.0) release 11/5/2013 9:38:06 PM
 - [Repeating Directive with Filter](https://github.com/scribeGriff/angular_examples/tree/master/web/repeat_directives_filter "Repeating Directive with Filter")
 - [Custom Directives - focus()](https://github.com/scribeGriff/angular_examples/tree/master/web/focus_directive)
 - [Component Directive](https://github.com/scribeGriff/angular_examples/tree/master/web/component_directive "Component Directive"): Rendering HTML in a custom component
+- Filters for search
+- Todo: see the angular.dart [demo](https://github.com/angular/angular.dart/tree/master/demo/todo "angular dart demo")
 
 ### Issues, Notes and Questions: ###
 
-- Doesn't seem the `filter:search` is working yet.
+- Search text implemented `filter:search` is working yet.
 - To use the ng-show or ng-hide directives, include the following in your project's css file:
 
 ````css
@@ -90,5 +93,5 @@ main() {
       <p>I am only visible when hide is false.</p>
     </div>
   </div>
-  </body>
+</body>
 ````

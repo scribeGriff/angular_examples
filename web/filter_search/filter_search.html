@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <title>Filter Search</title>
+    <link rel="stylesheet" href="../bootstrap.min.css">
+    <link rel="stylesheet" href="../angular_standard.css">
+    <script type="application/dart" src="filter_search.dart"></script>
+    <script src="packages/browser/dart.js"></script>
+  </head>
+
+  <body ng-app>
+    <div developers-search class="border well" ng-cloak>
+    Search any field for: <input ng-model="searchText" type="text" />
+      <ul class="well unstyled">
+        <li ng-repeat="developer in cntl.developers | filter:searchText">
+          {{developer.name}} from {{developer.country}}
+        </li>
+      </ul>
+    Search name field for: <input ng-model="search.name" type="text" />
+      <ul class="well unstyled">
+        <li ng-repeat="developer in cntl.developers | filter:search:strict">
+          {{developer.name}} from {{developer.country}}
+        </li>
+      </ul>
+    </div>
+  </body>
+</html>
