@@ -1,12 +1,14 @@
 ## Working with Angular in Dart ##
-![](http://1.bp.blogspot.com/-3y7twYcEV-I/Unk5VPpTMdI/AAAAAAAACiM/SRuk0bHMS20/s1600/Screen+Shot+2013-11-05+at+10.29.34+AM.png)  
-[Reference: Angular Dart on Github](https://github.com/angular/angular.dart)  
-[Angular Dart Tutorial](https://github.com/angular/angular.dart.tutorial "AngularDart Tutorial")  
+![](http://1.bp.blogspot.com/-3y7twYcEV-I/Unk5VPpTMdI/AAAAAAAACiM/SRuk0bHMS20/s1600/Screen+Shot+2013-11-05+at+10.29.34+AM.png)   
+**References**     
+[Angular Dart on Github](https://github.com/angular/angular.dart)  
+[Angular Dart Tutorial](https://github.com/angular/angular.dart.tutorial "AngularDart Tutorial")    
+[Angular Dart Tutorial Wiki ](https://github.com/angular/angular.dart.tutorial/wiki "Wiki for Tutorial")  
 See also: [angular-tips.com](http://angular-tips.com/ "angular tips")
 
 Looking at examples of using Dart with Angular.  
 
-Most examples updated to beta (v. 0.9.0) release 11/7/2013 6:43:28 PM   
+Most examples updated to beta (v. 0.9.0) release 11/9/2013 8:50:02 PM    
 
 ### Dart Equivalent Examples from [Why Does Angular.js Rock](http://angular-tips.com/blog/2013/08/why-does-angular-dot-js-rock/ "Why Does Angular.js Rock?"): ###
 
@@ -20,7 +22,8 @@ Most examples updated to beta (v. 0.9.0) release 11/7/2013 6:43:28 PM
 - [Custom Directives - focus()](https://github.com/scribeGriff/angular_examples/tree/master/web/focus_directive)
 - [Component Directive](https://github.com/scribeGriff/angular_examples/tree/master/web/component_directive "Component Directive"): Rendering HTML in a custom component
 - [Filters for search](https://github.com/scribeGriff/angular_examples/tree/master/web/filter_search "Filters for search")
-- Custom filter - capitalize
+- [Custom filter - capitalize](https://github.com/scribeGriff/angular_examples/tree/master/web/custom_filter "Custom filter - capitalize")
+- Simple Services - can't get to work yet.  See issues.
 - Todo: see the angular.dart [demo](https://github.com/angular/angular.dart/tree/master/demo/todo "angular dart demo")
 
 ### Issues, Notes and Questions: ###
@@ -35,7 +38,56 @@ Most examples updated to beta (v. 0.9.0) release 11/7/2013 6:43:28 PM
 }
 ````
 
-The show/hide example is included in the next section. 
+The show/hide example is included in the next section.   
+
+- Can not get the simple services example from angular-tips to work.  No matter what attempts I make, all I get is the same error - Exception: 'dart:mirrors-patch/mirrors_impl.dart': Failed assertion: line 1260: '_source != null' is not true.  The following is one of many attempts:
+
+````dart
+import 'package:angular/angular.dart';
+
+/* this does not work.  still investigating why not */
+
+@NgController(
+    selector: '[main-controller]',
+    publishAs: 'mcntl')
+class MainController {
+  User user;
+  MainController(UserInformation userInfo) {
+    user = userInfo.initInfo;
+  }
+}
+
+@NgController(
+    selector: '[second-controller]',
+    publishAs: 'scntl')
+class SecondController {
+  User user;
+  SecondController(UserInformation userInfo) {
+    user = userInfo.initInfo;
+  }
+}
+
+class User {
+  String name;
+
+  User([this.name = '']);
+}
+
+class UserInformation {
+  User get initInfo => new User('Angular.dart');
+}
+
+class MyAppModule extends Module {
+  MyAppModule() {
+    type(MainController);
+    type(SecondController);
+  }
+}
+
+main() {
+  ngBootstrap(module: new MyAppModule());
+}
+````
 
 ### Examples ###
 
