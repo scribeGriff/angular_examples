@@ -2,13 +2,13 @@ library services;
 
 import 'package:angular/angular.dart';
 
-/* this does not work.  still investigating why not */
+/* This does not work correctly.  Possible bug or perhaps not implemented yet. */
 
 @NgController(
     selector: '[main-controller]',
-    publishAs: 'mcntl')
+    publishAs: 'cntl')
 class MainController {
-  User user;
+  var user;
   MainController(UserInformation userInfo) {
     user = userInfo.initInfo;
   }
@@ -16,28 +16,25 @@ class MainController {
 
 @NgController(
     selector: '[second-controller]',
-    publishAs: 'scntl')
+    publishAs: 'cntl')
 class SecondController {
-  User user;
+  var user;
   SecondController(UserInformation userInfo) {
     user = userInfo.initInfo;
   }
 }
 
-class User {
-  String name;
-
-  User([this.name = '']);
-}
-
 class UserInformation {
-  User get initInfo => new User('Angular.dart');
+  get initInfo => {
+    'name': 'Angular.dart'
+  };
 }
 
 class MyAppModule extends Module {
   MyAppModule() {
     type(MainController);
     type(SecondController);
+    type(UserInformation);
   }
 }
 

@@ -23,7 +23,7 @@ Most examples updated to beta (v. 0.9.0) release 11/9/2013 8:50:02 PM
 - [Component Directive](https://github.com/scribeGriff/angular_examples/tree/master/web/component_directive "Component Directive"): Rendering HTML in a custom component
 - [Filters for search](https://github.com/scribeGriff/angular_examples/tree/master/web/filter_search "Filters for search")
 - [Custom filter - capitalize](https://github.com/scribeGriff/angular_examples/tree/master/web/custom_filter "Custom filter - capitalize")
-- Simple Services - can't get to work yet.  See issues.
+- [Simple Services](https://github.com/scribeGriff/angular_examples/tree/master/web/services_factory "Simple Services") - Not working correctly.  See issues.
 - Todo: see the angular.dart [demo](https://github.com/angular/angular.dart/tree/master/demo/todo "angular dart demo")
 
 ### Issues, Notes and Questions: ###
@@ -40,18 +40,18 @@ Most examples updated to beta (v. 0.9.0) release 11/9/2013 8:50:02 PM
 
 The show/hide example is included in the next section.   
 
-- Can not get the simple services example from angular-tips to work.  No matter what attempts I make, all I get is the same error - Exception: 'dart:mirrors-patch/mirrors_impl.dart': Failed assertion: line 1260: '_source != null' is not true.  The following is one of many attempts:
+- The following code of a simple services example does inject `UserInformation` into both controllers, but editing the user info in one controller does not update that information in the other controller, as in the Angular.js example.
 
 ````dart
 import 'package:angular/angular.dart';
 
-/* this does not work.  still investigating why not */
+/* This does not work correctly.  Possible bug or not implemented yet. */
 
 @NgController(
     selector: '[main-controller]',
-    publishAs: 'mcntl')
+    publishAs: 'cntl')
 class MainController {
-  User user;
+  var user;
   MainController(UserInformation userInfo) {
     user = userInfo.initInfo;
   }
@@ -59,28 +59,25 @@ class MainController {
 
 @NgController(
     selector: '[second-controller]',
-    publishAs: 'scntl')
+    publishAs: 'cntl')
 class SecondController {
-  User user;
+  var user;
   SecondController(UserInformation userInfo) {
     user = userInfo.initInfo;
   }
 }
 
-class User {
-  String name;
-
-  User([this.name = '']);
-}
-
 class UserInformation {
-  User get initInfo => new User('Angular.dart');
+  get initInfo => {
+    'name': 'Angular.dart'
+  };
 }
 
 class MyAppModule extends Module {
   MyAppModule() {
     type(MainController);
     type(SecondController);
+    type(UserInformation);
   }
 }
 
