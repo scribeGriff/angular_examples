@@ -8,7 +8,7 @@ See also: [angular-tips.com](http://angular-tips.com/ "angular tips")
 
 Looking at examples of using Dart with Angular.  
 
-Most examples updated to beta (v. 0.9.0) release 11/9/2013 8:50:02 PM    
+Most examples updated to beta (v. 0.9.0) release 11/17/2013 9:47:35 PM     
 
 ### Dart Equivalent Examples from [Why Does Angular.js Rock](http://angular-tips.com/blog/2013/08/why-does-angular-dot-js-rock/ "Why Does Angular.js Rock?"): ###
 
@@ -24,7 +24,7 @@ Most examples updated to beta (v. 0.9.0) release 11/9/2013 8:50:02 PM
 - [Filters for search](https://github.com/scribeGriff/angular_examples/tree/master/web/filter_search "Filters for search")
 - [Custom filter - capitalize](https://github.com/scribeGriff/angular_examples/tree/master/web/custom_filter "Custom filter - capitalize")
 - [Simple Services](https://github.com/scribeGriff/angular_examples/tree/master/web/services_factory "Simple Services") - Strange cursor/focus behavior although seems to work otherwise.  Opened [issue #264](https://github.com/angular/angular.dart/issues/264 "Issue 264").
-- Custom Directive with Attributes (my variation of the "pie chart" example)
+- [Custom Directive with Attributes](https://github.com/scribeGriff/angular_examples/tree/master/web/custom_directive_attributes "Custom Directive with Attributes") - my variation of the "pie chart" example
 - Todo: see the angular.dart [demo](https://github.com/angular/angular.dart/tree/master/demo/todo "angular dart demo")
 
 ### Issues, Notes and Questions: ###
