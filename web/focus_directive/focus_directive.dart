@@ -30,7 +30,7 @@ class PersonGreeterController {
 class FocusDirective {
   Element element;
 
-  FocusDirective(Element this.element) {
+  FocusDirective(this.element) {
     element.focus();
   }
 }

@@ -4,3 +4,7 @@ description: Experiments with using Angular in Dart.
 dependencies:
   angular: any
   browser: any
+  simplot:
+    git: git://github.com/scribeGriff/simplot.git
+  convolab:
+    git: git://github.com/scribeGriff/ConvoLab.git

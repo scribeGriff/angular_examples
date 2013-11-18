@@ -23,7 +23,8 @@ Most examples updated to beta (v. 0.9.0) release 11/9/2013 8:50:02 PM
 - [Component Directive](https://github.com/scribeGriff/angular_examples/tree/master/web/component_directive "Component Directive"): Rendering HTML in a custom component
 - [Filters for search](https://github.com/scribeGriff/angular_examples/tree/master/web/filter_search "Filters for search")
 - [Custom filter - capitalize](https://github.com/scribeGriff/angular_examples/tree/master/web/custom_filter "Custom filter - capitalize")
-- [Simple Services](https://github.com/scribeGriff/angular_examples/tree/master/web/services_factory "Simple Services") - Not working correctly.  See issues.
+- [Simple Services](https://github.com/scribeGriff/angular_examples/tree/master/web/services_factory "Simple Services") - Strange cursor/focus behavior although seems to work otherwise.  Opened [issue #264](https://github.com/angular/angular.dart/issues/264 "Issue 264").
+- Custom Directive with Attributes (my variation of the "pie chart" example)
 - Todo: see the angular.dart [demo](https://github.com/angular/angular.dart/tree/master/demo/todo "angular dart demo")
 
 ### Issues, Notes and Questions: ###
@@ -38,53 +39,7 @@ Most examples updated to beta (v. 0.9.0) release 11/9/2013 8:50:02 PM
 }
 ````
 
-The show/hide example is included in the next section.   
-
-- The following code of a simple services example does inject `UserInformation` into both controllers, but editing the user info in one controller does not update that information in the other controller, as in the Angular.js example.
-
-````dart
-import 'package:angular/angular.dart';
-
-/* This does not work correctly.  Possible bug or not implemented yet. */
-
-@NgController(
-    selector: '[main-controller]',
-    publishAs: 'cntl')
-class MainController {
-  var user;
-  MainController(UserInformation userInfo) {
-    user = userInfo.initInfo;
-  }
-}
-
-@NgController(
-    selector: '[second-controller]',
-    publishAs: 'cntl')
-class SecondController {
-  var user;
-  SecondController(UserInformation userInfo) {
-    user = userInfo.initInfo;
-  }
-}
-
-class UserInformation {
-  get initInfo => {
-    'name': 'Angular.dart'
-  };
-}
-
-class MyAppModule extends Module {
-  MyAppModule() {
-    type(MainController);
-    type(SecondController);
-    type(UserInformation);
-  }
-}
-
-main() {
-  ngBootstrap(module: new MyAppModule());
-}
-````
+The show/hide example is included in the next section.
 
 ### Examples ###
 
