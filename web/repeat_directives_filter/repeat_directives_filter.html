@@ -11,8 +11,8 @@
 
   <body ng-app>
     <div developers-controller class="border well" ng-cloak>
-      <ul class="well unstyled">
-        <li ng-repeat="developer in cntl.developers | orderBy:'name'">
+      <ul class="well list-unstyled">
+        <li ng-repeat="developer in cntl.developers | orderBy:'-name'">
           {{developer.name}} from {{developer.country}}
         </li>
       </ul>

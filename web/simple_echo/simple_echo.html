@@ -4,12 +4,13 @@
   <head>
     <title>simple echo - angular</title>
     <link rel="stylesheet" href="../angular_standard.css">
+    <link rel="stylesheet" href="../bootstrap.min.css">
     <script type="application/dart" src="simple_echo.dart"></script>
     <script src="packages/browser/dart.js"></script>
   </head>
   <body ng-app ng-cloak>
     <span>Insert your name:</span>
     <input type="text" ng-model="user.name" />
-    <h4>You are typing: {{user.name}}</h4>
+    <h4>Echo: {{user.name}}</h4>   
   </body>
 </html>

@@ -9,12 +9,6 @@ class SimpleController {
   final String message = 'World';
 }
 
-class MyAppModule extends Module {
-  MyAppModule() {
-    type(SimpleController);
-  }
-}
-
 main() {
-  ngBootstrap(module: new MyAppModule());
+  ngBootstrap(module: new AngularModule()..type(SimpleController));
 }

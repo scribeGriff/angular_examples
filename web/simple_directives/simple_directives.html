@@ -5,11 +5,11 @@
     <title>simple_directives - angular</title>
     <link rel="stylesheet" href="../bootstrap.min.css">
     <link rel="stylesheet" href="../angular_standard.css">
-    <script src="packages/browser/dart.js"></script>
     <script src="simple_directives.dart" type="application/dart"></script>
+    <script src="packages/browser/dart.js"></script>
   </head>
 
-  <body ng-app>
+  <body ng-app ng-cloak>
     <div class="border well">
       <button ng-click="show = !show" class="btn btn-primary">Show</button>
         <div ng-show="!show">

@@ -2,9 +2,11 @@ name: angular_examples
 author: Richard Griffith
 description: Experiments with using Angular in Dart.
 dependencies:
-  angular: any
-  browser: any
+  browser: ">=0.8.10"
+  angular: ">=0.9.1 <2.0.0"
   simplot:
     git: git://github.com/scribeGriff/simplot.git
   convolab:
     git: git://github.com/scribeGriff/ConvoLab.git
+environment:
+  sdk: ">=0.8.10 <2.0.0"

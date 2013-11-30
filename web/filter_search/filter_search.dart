@@ -6,16 +6,13 @@ import 'package:angular/angular.dart';
     selector: '[developers-search]',
     publishAs: 'cntl')
 class DevelopersSearch {
-  List developers;
-
-  DevelopersSearch() {
-    developers = [
-                  {'name': 'Jesus', 'country': 'Spain'},
-                  {'name': 'Dave', 'country': 'Canada'},
-                  {'name': 'Wesley', 'country': 'USA'},
-                  {'name': 'Krzysztof', 'country': 'Poland'}
-                 ];
-  }
+  final List developers = [
+                           {'name': 'Seth', 'country': 'USA'},
+                           {'name': 'Kasper', 'country': 'Denmark'},
+                           {'name': 'Claudio', 'country': 'Italy'},
+                           {'name': 'Matthew', 'country': 'Canada'},
+                           {'name': 'Anders', 'country': 'Sweden'}
+                           ];
 }
 
 main() {

@@ -12,15 +12,13 @@ class Developer {
     selector:'[developers-controller]',
     publishAs: 'cntl')
 class DevelopersController {
-  List developers;
-
-  DevelopersController() {
-    developers = [new Developer("Jesus", "Spain"),
-                  new Developer("Dave", "Canada"),
-                  new Developer("Wesley", "USA"),
-                  new Developer("Krzysztof", "Poland")
-                 ];
-  }
+  final List developers= [
+                          new Developer("Seth", "USA"),
+                          new Developer("Kasper", "Denmark"),
+                          new Developer("Claudio", "Italy"),
+                          new Developer("Matthew", "Canada"),
+                          new Developer("Anders", "Sweden")
+                         ];
 }
 
 class MyAppModule extends Module {

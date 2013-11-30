@@ -2,7 +2,7 @@ import 'package:angular/angular.dart';
 
 // The following is an example of direct injection of the template
 // rather than the example which injects from a file.
-// template: "<div>Hello from template, thank you for coming!</div>"
+// template: "<div>Hello from template, thank you for visiting!</div>"
 
 @NgComponent(
     selector: "hello",

@@ -4,10 +4,12 @@
   <head>
     <title>simple filter - angular</title>
     <link rel="stylesheet" href="../angular_standard.css">
+    <link rel="stylesheet" href="../bootstrap.min.css">
     <script type="application/dart" src="simple_filter.dart"></script>
     <script src="packages/browser/dart.js"></script>
   </head>
   <body ng-app ng-cloak>
-    <span>There are 13 phones in the basket. Total: {{ 1232.12 | currency }}</span>
+    <span>There are 13 phones in the basket. Total: {{ 1232.12 | currency }}</span><br>
+    <span>Uh Oh! The bill is due {{ '2014-03-12T12:45:00Z' | date:'medium' }}!</span>
   </body>
 </html>
